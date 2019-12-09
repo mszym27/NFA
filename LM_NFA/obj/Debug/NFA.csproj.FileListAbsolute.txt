@@ -1,0 +1,7 @@
+C:\Users\marcinszymko\Source\Repos\LM_NFA\LM_NFA\bin\Debug\LM_DFA.exe.config
+C:\Users\marcinszymko\Source\Repos\LM_NFA\LM_NFA\obj\Debug\LM_DFA.exe
+C:\Users\marcinszymko\Source\Repos\LM_NFA\LM_NFA\obj\Debug\LM_DFA.pdb
+C:\Users\marcinszymko\Source\Repos\LM_NFA\LM_NFA\bin\Debug\LM_DFA.exe
+C:\Users\marcinszymko\Source\Repos\LM_NFA\LM_NFA\bin\Debug\LM_DFA.pdb
+C:\Users\marcinszymko\Source\Repos\LM_NFA\LM_NFA\obj\Debug\NFA.csprojResolveAssemblyReference.cache
+C:\Users\marcinszymko\Source\Repos\LM_NFA\LM_NFA\bin\Debug\input.csv

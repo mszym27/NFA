@@ -1,0 +1,6 @@
+C:\Users\marcinszymko\Documents\Visual Studio 2015\Projects\LM_DFA\LM_DFA\bin\Debug\LM_DFA.exe.config
+C:\Users\marcinszymko\Documents\Visual Studio 2015\Projects\LM_DFA\LM_DFA\bin\Debug\LM_DFA.exe
+C:\Users\marcinszymko\Documents\Visual Studio 2015\Projects\LM_DFA\LM_DFA\bin\Debug\LM_DFA.pdb
+C:\Users\marcinszymko\Documents\Visual Studio 2015\Projects\LM_DFA\LM_DFA\obj\Debug\LM_DFA.csprojResolveAssemblyReference.cache
+C:\Users\marcinszymko\Documents\Visual Studio 2015\Projects\LM_DFA\LM_DFA\obj\Debug\LM_DFA.exe
+C:\Users\marcinszymko\Documents\Visual Studio 2015\Projects\LM_DFA\LM_DFA\obj\Debug\LM_DFA.pdb
