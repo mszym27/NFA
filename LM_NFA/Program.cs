@@ -6,7 +6,7 @@ namespace LM_NFA
 {
     class Program
     {
-        private const char SPLIT_CHAR = ',';
+        private const char SEPARATOR_CHAR = ',';
 
         static void Main(string[] args)
         {
@@ -43,10 +43,22 @@ namespace LM_NFA
 
             var inputFile = new StreamReader("input.csv");
 
-            var input = inputFile.ReadLine().Split(SPLIT_CHAR);
+            var input = inputFile.ReadLine().Split(SEPARATOR_CHAR);
             
             foreach (var inputString in input)
                 Console.WriteLine(inputString);
+
+            // dla uproszczenia programu
+            // oraz by zredukowac czas dzialania
+            // petla jest przerywana natychmiast gdy zostanie napotkany stan akceptujacy
+            // sam automat kontynuowalby wtedy prace
+
+            // powinno byc inaczej - petla konczy sie 
+            // w momencie wczytania separatora - kiedy dojdziemy
+            // do konca danego stringa
+            // wtedy badany jest stan automatu
+            // jesli lista aktualnych stanow zawiera stan akceptujacy
+            // wtedy wczytane slowo jest poprawne
 
             //pauzuje program
             Console.ReadLine();

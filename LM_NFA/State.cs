@@ -11,9 +11,6 @@ namespace LM_NFA
         // identyfikuje dany stan
         public string stateName;
 
-        // co zostanie wypisane po dojsciu do danego stanu
-        public string output;
-
         // przejscia - mapuje alfabet na zbior stanow
         public Dictionary<string, string> transitions;
 
