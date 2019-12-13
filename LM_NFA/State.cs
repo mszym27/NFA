@@ -12,7 +12,7 @@ namespace LM_NFA
         public string stateName;
 
         // przejscia - mapuje alfabet na zbior stanow
-        public Dictionary<string, string> transitions; // string, state
+        public Dictionary<char, string> transitions; // Dictionary<char, State> transitions;
 
         // identyfikuje stany akceptujace
         public bool isAccept;
