@@ -6,7 +6,7 @@ namespace LM_NFA
 {
     class Program
     {
-        private const char SEPARATOR_CHAR = ',';
+        private const char SEPARATOR_CHAR = '#';
 
         static void Main(string[] args)
         {
