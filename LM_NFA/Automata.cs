@@ -140,7 +140,7 @@ namespace LM_NFA
 
         public string GetCurrentStateNamesConcatenated()
         {
-            return String.Join(",", currentStates);
+            return " (" + String.Join(",", currentStates) + ") ";
         }
 
         public bool IsCurrentStateAccept()

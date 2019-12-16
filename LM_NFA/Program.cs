@@ -55,7 +55,7 @@ namespace LM_NFA
 
                 foreach (var name in pastStateNames)
                 {
-                    Console.Write("-> " + name);
+                    Console.Write("->" + name);
                 }
 
                 Console.WriteLine("");
