@@ -1,0 +1,6 @@
+C:\Users\marcinszymko\Source\Repos\LM_NFA\LM_NFA\bin\Debug\LM_NFA.exe.config
+C:\Users\marcinszymko\Source\Repos\LM_NFA\LM_NFA\bin\Debug\input.csv
+C:\Users\marcinszymko\Source\Repos\LM_NFA\LM_NFA\bin\Debug\LM_NFA.exe
+C:\Users\marcinszymko\Source\Repos\LM_NFA\LM_NFA\bin\Debug\LM_NFA.pdb
+C:\Users\marcinszymko\Source\Repos\LM_NFA\LM_NFA\obj\Debug\LM_NFA.exe
+C:\Users\marcinszymko\Source\Repos\LM_NFA\LM_NFA\obj\Debug\LM_NFA.pdb

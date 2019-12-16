@@ -7,8 +7,8 @@
     <ProjectGuid>{24730A95-2227-4929-B4B3-4496D1AEFADD}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>LM_DFA</RootNamespace>
-    <AssemblyName>LM_DFA</AssemblyName>
+    <RootNamespace>LM_NFA</RootNamespace>
+    <AssemblyName>LM_NFA</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
