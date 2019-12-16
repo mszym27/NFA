@@ -10,12 +10,6 @@ namespace LM_NFA
 
         static void Main(string[] args)
         {
-            //    var pastStateNames = new List<String>();
-
-            //    var NFA = new Automata();
-
-            //    Console.WriteLine("Lingwistyka matematyczna - laboratoria pierwsze, NFA");
-
             //    Console.WriteLine("Proszę rozpocząć wprowadzanie monet");
 
             //    while(NFA.currentState.isAccept == false)
@@ -31,22 +25,45 @@ namespace LM_NFA
             //        Console.WriteLine(NFA.currentState.output);
             //    }
 
-            //    Console.WriteLine("KONIEC");
-
-            //    Console.WriteLine("Koniec w stanie: " + NFA.currentState.stateName);
-
-            //    Console.WriteLine("Po drodze do niego przebyto");
-
-            //    foreach (var name in pastStateNames) {
-            //        Console.Write("->" + name);
-            //    }
-
             var inputFile = new StreamReader("input.csv");
 
             var input = inputFile.ReadLine().Split(SEPARATOR_CHAR);
-            
+
+            var NFA = new Automata();
+
+            Console.WriteLine("Lingwistyka matematyczna - laboratoria drugie, NFA");
+
             foreach (var inputString in input)
-                Console.WriteLine(inputString);
+            {
+                Console.WriteLine("--------------------------------------------------");
+
+                Console.WriteLine("Przetwarzany jest wyraz: " + inputString);
+
+                var pastStateNames = new List<String>();
+
+                foreach (var symbol in inputString)
+                {
+                    NFA.Transition(symbol);
+
+                    pastStateNames.Add(NFA.GetCurrentStateNamesConcatenated());
+                }
+
+                Console.WriteLine("Koniec w stanie\\ach: " + NFA.GetCurrentStateNamesConcatenated());
+
+                Console.WriteLine("Po drodze przebyto");
+
+                foreach (var name in pastStateNames)
+                {
+                    Console.Write("-> " + name);
+                }
+
+                Console.WriteLine("");
+
+                if (NFA.IsCurrentStateAccept())
+                    Console.WriteLine(NFA.GetAcceptStateOutput());
+                else
+                    Console.WriteLine("Wyraz nie został zaakceptowany");
+            }
 
             // dla uproszczenia programu
             // oraz by zredukowac czas dzialania

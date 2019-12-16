@@ -8,13 +8,14 @@ namespace LM_NFA
 {
     class Automata
     {
-        public List<State> states;
+        private List<State> states;
 
-        public List<State> currentStates;
+        private List<State> currentStates;
 
-        public Automata ()
+        public Automata()
         {
             states = new List<State>();
+            currentStates = new List<State>();
 
             // inicjalizacja automatu - tablica przejść
 
@@ -31,7 +32,7 @@ namespace LM_NFA
             states.Add(
                 new State()
                 {
-                    stateName = "qaccn",
+                    stateName = "qan",
                     isAccept = true,
                     output = "Wykryto powtorzenie w wartosciach numerycznych"
                 }
@@ -41,59 +42,59 @@ namespace LM_NFA
             states.Add(
                 new State()
                 {
-                    stateName = "qaccc",
+                    stateName = "qac",
                     isAccept = true,
                     output = "Wykryto powtorzenie w literach"
                 }
             );
 
-            states.Add(new State() { stateName = "q0", transitions = new Dictionary<char, State>() { ['0'] = "qaccn" } });
-            states.Add(new State() { stateName = "q1", transitions = new Dictionary<char, State>() { ['1'] = "qaccn" } });
-            states.Add(new State() { stateName = "q2", transitions = new Dictionary<char, State>() { ['2'] = "qaccn" } });
-            states.Add(new State() { stateName = "q3", transitions = new Dictionary<char, State>() { ['3'] = "qaccn" } });
-            states.Add(new State() { stateName = "q4", transitions = new Dictionary<char, State>() { ['4'] = "qaccn" } });
-            states.Add(new State() { stateName = "qa", transitions = new Dictionary<char, State>() { ['a'] = "qaccc" } });
-            states.Add(new State() { stateName = "qb", transitions = new Dictionary<char, State>() { ['b'] = "qaccc" } });
-            states.Add(new State() { stateName = "qc", transitions = new Dictionary<char, State>() { ['c'] = "qaccc" } });
-            states.Add(new State() { stateName = "qd", transitions = new Dictionary<char, State>() { ['d'] = "qaccc" } });
-            states.Add(new State() { stateName = "qe", transitions = new Dictionary<char, State>() { ['e'] = "qaccc" } });
+            states.Add(new State() { stateName = "q0", transitions = new Dictionary<char, State>() { ['0'] = GetStateByName("qan") } });
+            states.Add(new State() { stateName = "q1", transitions = new Dictionary<char, State>() { ['1'] = GetStateByName("qan") } });
+            states.Add(new State() { stateName = "q2", transitions = new Dictionary<char, State>() { ['2'] = GetStateByName("qan") } });
+            states.Add(new State() { stateName = "q3", transitions = new Dictionary<char, State>() { ['3'] = GetStateByName("qan") } });
+            states.Add(new State() { stateName = "q4", transitions = new Dictionary<char, State>() { ['4'] = GetStateByName("qan") } });
+            states.Add(new State() { stateName = "qa", transitions = new Dictionary<char, State>() { ['a'] = GetStateByName("qac") } });
+            states.Add(new State() { stateName = "qb", transitions = new Dictionary<char, State>() { ['b'] = GetStateByName("qac") } });
+            states.Add(new State() { stateName = "qc", transitions = new Dictionary<char, State>() { ['c'] = GetStateByName("qac") } });
+            states.Add(new State() { stateName = "qd", transitions = new Dictionary<char, State>() { ['d'] = GetStateByName("qac") } });
+            states.Add(new State() { stateName = "qe", transitions = new Dictionary<char, State>() { ['e'] = GetStateByName("qac") } });
 
             states
-                .Where(q => q.stateName == "qaccn")
+                .Where(q => q.stateName == "qan")
                 .First().transitions = new Dictionary<char, State>
                 {
-                    ['0'] = "qaccn",
-                    ['1'] = "qaccn",
-                    ['2'] = "qaccn",
-                    ['3'] = "qaccn",
-                    ['4'] = "qaccn",
+                    ['0'] = GetStateByName("qan"),
+                    ['1'] = GetStateByName("qan"),
+                    ['2'] = GetStateByName("qan"),
+                    ['3'] = GetStateByName("qan"),
+                    ['4'] = GetStateByName("qan"),
                 };
 
             states
-                .Where(q => q.stateName == "qaccc")
+                .Where(q => q.stateName == "qac")
                 .First().transitions = new Dictionary<char, State>
                 {
-                    ['a'] = "qaccc",
-                    ['b'] = "qaccc",
-                    ['c'] = "qaccc",
-                    ['d'] = "qaccc",
-                    ['e'] = "qaccc",
+                    ['a'] = GetStateByName("qac"),
+                    ['b'] = GetStateByName("qac"),
+                    ['c'] = GetStateByName("qac"),
+                    ['d'] = GetStateByName("qac"),
+                    ['e'] = GetStateByName("qac"),
                 };
 
             states
                 .Where(q => q.stateName == "qbeg")
                 .First().transitions = new Dictionary<char, State>
                 {
-                    ['0'] = "qbeg", ['0'] = "q0",
-                    ['1'] = "qbeg", ['1'] = "q1",
-                    ['2'] = "qbeg", ['2'] = "q2",
-                    ['3'] = "qbeg", ['3'] = "q3",
-                    ['4'] = "qbeg", ['4'] = "q4",
-                    ['a'] = "qbeg", ['a'] = "qa",
-                    ['b'] = "qbeg", ['b'] = "qb",
-                    ['c'] = "qbeg", ['c'] = "qc",
-                    ['d'] = "qbeg", ['d'] = "qd",
-                    ['e'] = "qbeg", ['e'] = "qe",
+                    ['0'] = GetStateByName("qbeg"), ['0'] = GetStateByName("q0"),
+                    ['1'] = GetStateByName("qbeg"), ['1'] = GetStateByName("q1"),
+                    ['2'] = GetStateByName("qbeg"), ['2'] = GetStateByName("q2"),
+                    ['3'] = GetStateByName("qbeg"), ['3'] = GetStateByName("q3"),
+                    ['4'] = GetStateByName("qbeg"), ['4'] = GetStateByName("q4"),
+                    ['a'] = GetStateByName("qbeg"), ['a'] = GetStateByName("qa"),
+                    ['b'] = GetStateByName("qbeg"), ['b'] = GetStateByName("qb"),
+                    ['c'] = GetStateByName("qbeg"), ['c'] = GetStateByName("qc"),
+                    ['d'] = GetStateByName("qbeg"), ['d'] = GetStateByName("qd"),
+                    ['e'] = GetStateByName("qbeg"), ['e'] = GetStateByName("qe"),
                 };
 
             // ustawienie automatu na stan poczatkowy
@@ -108,27 +109,57 @@ namespace LM_NFA
         // jesli zostal wprowadzony symbol spoza alfabetu
         // to maszyna pozostaje w tym samym stanie
         // jest to widoczne w historii przejsc
-        public void Transition(string simbol)
+        public void Transition(char symbol)
         {
-            //var newStateName = currentState
-            //    .transitions
-            //    .Where(q => q.Key == simbol)
-            //    .FirstOrDefault()
-            //    .Value;
+            var newStates = new List<State>();
 
-            //foreach (var state in states)
-            //{
-            //    if(state.stateName == newStateName)
-            //    {
-            //        currentState = state;
+            foreach (var state in currentStates)
+            {
+                newStates
+                    .AddRange(state
+                        .transitions
+                        .Where(q => q.Key == symbol)
+                        .Select(q => q.Value)
+                    );
+            }
 
-            //        break;
-            //    }
-            //}
-
-            //currentStates = currentStates.Select(q => q.transitions);
+            currentStates = newStates;
 
             return;
+        }
+
+        public string GetCurrentStateNamesConcatenated()
+        {
+            return String.Join(",", currentStates);
+        }
+
+        public bool IsCurrentStateAccept()
+        {
+            return currentStates.
+                Where(q => q.isAccept).
+                Any();
+        }
+
+        public string GetAcceptStateOutput()
+        {
+            var acceptState = currentStates.
+                Where(q => q.isAccept).
+                FirstOrDefault();
+
+            if (acceptState != null)
+            {
+                return acceptState.output;
+            }
+
+            return "";
+        }
+
+        // metoda asystuje przy wyborze stanu
+        private State GetStateByName(string name)
+        {
+            return states
+                .Where(q => q.stateName == name)
+                .First();
         }
     }
 }
