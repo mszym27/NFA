@@ -1,6 +1,7 @@
 ﻿using System;
 using System.IO;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace LM_NFA
 {
@@ -65,17 +66,21 @@ namespace LM_NFA
                     Console.WriteLine("Wyraz nie został zaakceptowany");
             }
 
-            // dla uproszczenia programu
-            // oraz by zredukowac czas dzialania
-            // petla jest przerywana natychmiast gdy zostanie napotkany stan akceptujacy
-            // sam automat kontynuowalby wtedy prace
+            // niestety słowniki w ten sposób nie działają. Nie wspierają kilku takich samych kluczy, w tym wypadku zwracają po prostu ostatni
+            // potrzebuję listy Stanów
 
-            // powinno byc inaczej - petla konczy sie 
-            // w momencie wczytania separatora - kiedy dojdziemy
-            // do konca danego stringa
-            // wtedy badany jest stan automatu
-            // jesli lista aktualnych stanow zawiera stan akceptujacy
-            // wtedy wczytane slowo jest poprawne
+            var tempDict = new Dictionary<char, string>() { ['0'] = "111" , ['0'] = "999" };
+
+            var newStates = new List<string>();
+
+            newStates
+                    .AddRange(tempDict
+                        .Where(q => q.Key == '0')
+                        .Select(q => q.Value)
+                    );
+
+            var partDict = tempDict
+                        .Where(q => q.Key == '0');
 
             //pauzuje program
             Console.ReadLine();
