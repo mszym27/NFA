@@ -66,22 +66,6 @@ namespace LM_NFA
                     Console.WriteLine("Wyraz nie został zaakceptowany");
             }
 
-            // niestety słowniki w ten sposób nie działają. Nie wspierają kilku takich samych kluczy, w tym wypadku zwracają po prostu ostatni
-            // potrzebuję listy Stanów
-
-            var tempDict = new Dictionary<char, string>() { ['0'] = "111" , ['0'] = "999" };
-
-            var newStates = new List<string>();
-
-            newStates
-                    .AddRange(tempDict
-                        .Where(q => q.Key == '0')
-                        .Select(q => q.Value)
-                    );
-
-            var partDict = tempDict
-                        .Where(q => q.Key == '0');
-
             //pauzuje program
             Console.ReadLine();
         }
