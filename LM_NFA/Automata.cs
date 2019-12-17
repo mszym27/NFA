@@ -68,6 +68,11 @@ namespace LM_NFA
                     ['2'] = GetStateByNameAsList("qan"),
                     ['3'] = GetStateByNameAsList("qan"),
                     ['4'] = GetStateByNameAsList("qan"),
+                    ['a'] = GetStateByNameAsList("qan"),
+                    ['b'] = GetStateByNameAsList("qan"),
+                    ['c'] = GetStateByNameAsList("qan"),
+                    ['d'] = GetStateByNameAsList("qan"),
+                    ['e'] = GetStateByNameAsList("qan"),
                 };
 
             states
@@ -79,6 +84,11 @@ namespace LM_NFA
                     ['c'] = GetStateByNameAsList("qac"),
                     ['d'] = GetStateByNameAsList("qac"),
                     ['e'] = GetStateByNameAsList("qac"),
+                    ['0'] = GetStateByNameAsList("qac"),
+                    ['1'] = GetStateByNameAsList("qac"),
+                    ['2'] = GetStateByNameAsList("qac"),
+                    ['3'] = GetStateByNameAsList("qac"),
+                    ['4'] = GetStateByNameAsList("qac"),
                 };
 
             states

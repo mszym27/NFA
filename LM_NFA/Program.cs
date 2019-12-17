@@ -30,12 +30,12 @@ namespace LM_NFA
 
             var input = inputFile.ReadLine().Split(SEPARATOR_CHAR);
 
-            var NFA = new Automata();
-
             Console.WriteLine("Lingwistyka matematyczna - laboratoria drugie, NFA");
 
             foreach (var inputString in input)
             {
+                var NFA = new Automata();
+
                 Console.WriteLine("--------------------------------------------------");
 
                 Console.WriteLine("Przetwarzany jest wyraz: " + inputString);
