@@ -44,9 +44,9 @@ namespace LM_NFA
 
                 foreach (var symbol in inputString)
                 {
-                    NFA.Transition(symbol);
-
                     pastStateNames.Add(NFA.GetCurrentStateNamesConcatenated());
+
+                    NFA.Transition(symbol);
                 }
 
                 Console.WriteLine("Koniec w stanie\\ach: " + NFA.GetCurrentStateNamesConcatenated());
