@@ -11,21 +11,6 @@ namespace LM_NFA
 
         static void Main(string[] args)
         {
-            //    Console.WriteLine("Proszę rozpocząć wprowadzanie monet");
-
-            //    while(NFA.currentState.isAccept == false)
-            //    {
-            //        pastStateNames.Add(NFA.currentState.stateName);
-
-            //        var input = Console.ReadLine();
-
-            //        NFA.Transition(input);
-
-            //        Console.WriteLine(NFA.currentState.stateName + ":");
-
-            //        Console.WriteLine(NFA.currentState.output);
-            //    }
-
             var inputFile = new StreamReader("input.csv");
 
             var input = inputFile.ReadLine().Split(SEPARATOR_CHAR);

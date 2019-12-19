@@ -125,19 +125,11 @@ namespace LM_NFA
 
             foreach (var state in currentStates)
             {
-                //var transitionStates = state.transitions[symbol]; // nie dziala dla symboli spoza slownika
-                //// czyli sie nie sprawdza dla NFA
-
                 var transitionStates = state
                     .transitions
                     .Where(q => q.Key == symbol)
                     .FirstOrDefault()
                     .Value;
-
-                //(List<State>) state
-                //    .transitions
-                //    .Where(q => q.Key == symbol)
-                //    .Select(q => q.Value);
 
                 if(transitionStates != null)
                     newStates.AddRange(transitionStates);
